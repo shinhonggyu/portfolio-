@@ -1,6 +1,13 @@
+@import '../../global.scss';
+
 .intro {
   background-color: white;
   display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .left {
     flex: 0.5;
@@ -17,11 +24,22 @@
       // float: right;
       margin-right: 25px;
 
+      @include mobile {
+        align-items: flex-start;
+        height: 400px;
+      }
+
       img {
         width: 80%;
         height: 80%;
         object-fit: cover;
         border-radius: 50%;
+
+        @include mobile {
+          width: 50%;
+          height: 70%;
+          padding-left: 25px;
+        }
       }
     }
   }
